@@ -1,0 +1,13 @@
+# fly.toml app configuration file generated for query-studio on 2023-10-18T19:11:15+02:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "query-studio"
+primary_region = ""
+
+[build]
+
+[http_service]
+  internal_port = 3000
+  force_https = true

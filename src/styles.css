@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --scrollbar-color-primary: rgb(71 85 105);
+        /* bg-slate-600 */
+        --scrollbar-color-secondary: rgb(15 23 42);
+        /* bg-slate-900 */
+    }
+}
+
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: var(--scrollbar-color-secondary) var(--scrollbar-color-primary);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--scrollbar-color-primary);
+    border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-color-secondary);
+    border-radius: 14px;
+    border: 3px solid var(--scrollbar-color-primary);
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.sr-only {
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.c-code-editor-line-number,
+.code-editor-textarea,
+.code-editor-code {
+    font-size: .8rem;
+    line-height: 1.5;
+}
+
+.c-code-editor-line-number {
+    counter-reset: linenumber;
+}
+
+.c-code-editor-line-number>li::before {
+    counter-increment: linenumber;
+    content: counter(linenumber);
+    padding-top: 0.2rem;
+}
+
+.code-editor-textarea {
+    background-color: transparent;
+    border: none;
+    caret-color: #fff;
+    color: transparent;
+    width: 100%;
+}
+
+.code-editor-code {
+    background-color: transparent;
+    font-family: inherit;
+    height: 100%;
+    left: 0px;
+    margin: 0px;
+    pointer-events: none;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
