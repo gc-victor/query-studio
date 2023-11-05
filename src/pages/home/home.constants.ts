@@ -1,5 +1,5 @@
 // Database
-export const DEFAULT_CONFIG_DB = "config.sql";
+export const DEFAULT_CONFIG_DB = "query_config.sql";
 // Events
 export const EVENT_REMOVE_CODE_EDITOR_CONTENT = "removeCodeEditorContent";
 // Ids
