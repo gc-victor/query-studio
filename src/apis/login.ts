@@ -5,7 +5,7 @@ import { cors } from "http/cors";
 import { fetcher } from "http/fetcher";
 import { getBody, getter } from "http/get-body";
 import { Method } from "http/method";
-import { QUERY_API_USER_TOKEN_VALUE } from "http/http.constants";
+import { QUERY_API_USER_TOKEN_VALUE } from "http/constants";
 import { RequestHeader } from 'http/header';
 import { setUserSession } from "apis/user-session";
 

@@ -6,7 +6,7 @@ import { getBody, getter } from "http/get-body";
 import { getUserSession, userSession } from "apis/user-session";
 import { Method } from "http/method";
 import { ok } from "http/responses";
-import { QUERY_API_QUERY } from "http/http.constants";
+import { QUERY_API_QUERY } from "http/constants";
 import { RequestHeader } from "http/header";
 
 export async function apiQuery(req: Request): Promise<Response> {
@@ -36,7 +36,7 @@ export async function apiQuery(req: Request): Promise<Response> {
             [RequestHeader.CONTENT_TYPE]: "application/json",
         },
     });
-    
+
     const res = ok(JSON.stringify((response[`${getter.json}`] as unknown as { data: unknown[]; })));
 
     cors(res);
