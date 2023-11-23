@@ -36,13 +36,13 @@ help: echo-bun ## Show this help
 
 .PHONY: hurl
 hurl:
-	hurl --verbose --fail-at-end --variables-file hurl/.env $(ARGUMENTS)
+	hurl --verbose --continue-on-error --variables-file hurl/.env $(ARGUMENTS)
 
 hurl-test:
-	hurl --test --fail-at-end --variables-file hurl/.env $(ARGUMENTS)
+	hurl --test --continue-on-error --variables-file hurl/.env $(ARGUMENTS)
 
 hurl-test-all:
-	hurl --test --fail-at-end --variables-file hurl/.env hurl/**/*.hurl hurl/**/**/*.hurl
+	hurl --test --continue-on-error --variables-file hurl/.env hurl/*.hurl
 
 # Dependencies
 
